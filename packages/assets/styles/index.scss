@@ -1,0 +1,13 @@
+@use './theme'; /* 主题颜色 */
+@use './element.scss'; /* element */
+// @use './dark'; /* 深色主题 */
+
+.x-y-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h-100 {
+  height: 100%;
+}

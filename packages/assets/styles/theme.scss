@@ -1,0 +1,38 @@
+/* 主题颜色 变量
+------------------------------- */
+
+:root {
+  /*----重新定义 element-plus 变量值 (会影响到子应用)----*/
+  --el-menu-item-height: 40px !important;
+  --el-menu-base-level-padding: 11px !important;
+  --el-color-primary: #046af9 !important;
+  --el-color-primary-light-3: #3889fa !important;
+
+  /*----element plus 组件 ----*/
+  --portal-header-color: #fff;
+  --portal-border-light-color: #e5e6ea;
+  --portal-header-fill-color: #f2f3f5;
+  --portal-table-td-fill-color: #f7f8fa;
+
+  /*----其它自定义变量 ----*/
+  --portal-bg-color: #f2f3f5;
+  --portal-text-default-color: #1d2129;
+  --portal-disabled-text-color: #86909c;
+  --portal-select-bg-color: #e5eef5;
+
+  --portal-el-menu-active-text-color: #fff; // 菜单选中字体颜色
+  --portal-el-menu-color: #323d4b; // 菜单字体颜色
+  --portal-el-menu-background: #fff; // 菜单背景
+
+  --portal-theme-main-color-black: #011532; // 主题色 黑
+  --portal-theme-main-color-blue: #046af9; // 主题色 蓝
+  --portal-theme-main-color-blue2: #1976d2; // 主题色 航天蓝
+  --portal-theme-main-color-grey: #f2f3f5; // 主题色 灰
+
+  --box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* 扩散型阴影：shadow-box */
+}
+
+/*  ======== 暗黑模式颜色 ========  */
+.dark {
+  --el-color-primary: theme('colors.rose.800');
+}
