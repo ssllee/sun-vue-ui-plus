@@ -5,13 +5,18 @@
   "author": "sunlie",
   "license": "MIT",
   "private": false,
-  "main": "lib/sun-vue-ui-plus.umd.cjs",
-  "module": "lib/sun-vue-ui-plus.umd.cjs",
+  "main": "lib/sun-vue-ui-plus.umd.js",
+  "module": "lib/sun-vue-ui-plus.es.js",
   "types": "lib/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/sun-vue-ui-plus.es.js",
+      "require": "./dist/sun-vue-ui-plus.umd.js"
+    }
+  },
   "files": [
-    "lib",
-    "types"
+    "lib"
   ],
   "scripts": {
     "dev": "vite",

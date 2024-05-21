@@ -17,7 +17,7 @@ export default defineConfig(({ command, mode }) => {
     },
     plugins: [
       vue(),
-      dts(),
+      dts(), // dts({ rollupTypes: true })
       vueJsx(),
       viteCompression({
         verbose: true,
@@ -52,7 +52,6 @@ export default defineConfig(({ command, mode }) => {
     resolve: {
       // 配置别名
       alias: {
-        // '@': resolve(__dirname, 'examples'),
         '@': resolve(__dirname, 'packages')
       },
       // 类型： string[] 导入时想要省略的扩展名列表。
@@ -72,12 +71,9 @@ export default defineConfig(({ command, mode }) => {
         }
       },
       lib: {
-        // entry: resolve(__dirname, 'packages/index.ts'),
-        entry: './packages/index.ts',
-        name: 'sun-vue-ui-plus',
-        // formats: ['es', 'cjs'],
-        // formats: ['es', 'umd', 'cjs'],
-        fileName: 'sun-vue-ui-plus'
+        entry: resolve(__dirname, 'packages/index.ts'),
+        name: 'SunVueUiPlus',
+        fileName: (format) => `sun-vue-ui-plus.${format}.js`
       }
     }
   }

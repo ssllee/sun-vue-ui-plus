@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    // 指定ECMAScript目标版本
     "target": "ESNext",
     "useDefineForClassFields": true,
     "noImplicitAny": false, // 隐式具有“any”类型
+    // 从 tslib 导入辅助工具函数（比如 __extends， __rest等）
+    "importHelpers": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "strict": true,
@@ -39,6 +43,7 @@
         "types/*"
       ]
     },
+    // 忽略所有的声明文件（ *.d.ts）的类型检查。
     "skipLibCheck": true
   },
   "include": [
@@ -54,7 +59,7 @@
   ],
   "exclude": [
     "node_modules",
-    "dist",
+    "lib",
     "public"
   ],
   "references": [
