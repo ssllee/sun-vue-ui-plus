@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import libCss from 'vite-plugin-libcss' // 打包样式
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import AutoImport from 'unplugin-auto-import/vite' // 自动导入
 import viteCompression from 'vite-plugin-compression' // 静态资源压缩
@@ -17,6 +18,7 @@ export default defineConfig(({ command, mode }) => {
     },
     plugins: [
       vue(),
+      libCss(), //
       dts(), // dts({ rollupTypes: true })
       vueJsx(),
       viteCompression({
@@ -59,7 +61,7 @@ export default defineConfig(({ command, mode }) => {
     },
     build: {
       outDir: 'lib',
-      // cssCodeSplit: true, // 强制内联CSS
+      cssCodeSplit: true, // 强制内联CSS
       rollupOptions: {
         // 请确保外部化那些你的库中不需要的依赖
         external: ['vue'],

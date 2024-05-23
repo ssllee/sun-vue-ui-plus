@@ -12,7 +12,7 @@
         :border="setBorder"
         style="width: 100%"
         empty-text="暂无数据"
-        class="portal-site-table"
+        class="sunwise-table"
         @selection-change="handleSelectionChange"
       >
         <el-table-column v-if="config.isSelection" type="selection" width="50" align="center" />
