@@ -18,7 +18,7 @@ import SunVueUiPlus from 'sun-vue-ui-plus' // 全部引入
 
 const app = createApp(App)
 // app.component('STable', STable)
-app.use(SunVueUi, { locale: zhCn })
+app.use(SunVueUi, { locale: zhCn, size: 'large' })
 app.use(SunVueUiPlus)
 app.mount('#app')
 ```

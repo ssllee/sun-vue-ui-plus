@@ -7,9 +7,9 @@
     "extensions": [".ts", ".tsx", ".vue"]
   },
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "never",
-    "source.fixAll": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.organizeImports": false, // import 按顺序排
+    "source.fixAll": true,
+    "source.fixAll.eslint": true // 保存时自动修复
   },
   // 关闭 vscode 默认的检查工具
   "html.validate.scripts": false,

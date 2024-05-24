@@ -2,6 +2,10 @@
 @use './element.scss'; /* element */
 // @use './dark'; /* 深色主题 */
 
+* {
+  box-sizing: border-box;
+}
+
 .x-y-center {
   display: flex;
   align-items: center;

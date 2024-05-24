@@ -6,6 +6,10 @@
 // 弹框有时会错位，先这样解决
 .el-dialog__header {
   position: relative !important;
+  .el-dialog__headerbtn {
+    top: -15px;
+    right: -15px;
+  }
 }
 
 .el-dialog .el-dialog__header {
@@ -14,6 +18,10 @@
 
 // 弹框 a 表头上有一条线
 .dialog-type-a {
+  /* v2.7.0 css增加了 padding */
+  &.el-dialog {
+    padding: 0;
+  }
   .el-dialog__header {
     width: 100%;
     height: 50px;
@@ -22,6 +30,10 @@
     margin-right: 0;
     border-bottom: 1px solid var(--sunwise-border-light-color);
 
+    .el-dialog__headerbtn {
+      top: 0;
+      right: 0;
+    }
     .el-dialog__title {
       font-size: 16px;
       font-weight: 500;
@@ -34,10 +46,18 @@
   .el-dialog__body {
     padding: 20px;
   }
+  .el-dialog__footer {
+    padding-right: 20px;
+    padding-bottom: 16px;
+  }
 }
 
-// 弹框 b 表头上有一条线,且表头固定在顶部 全屏
+// 弹框 b 表头上有一条线,且表头固定在顶部
 .dialog-type-header-fixed {
+  /* v2.7.0 css增加了 padding */
+  &.el-dialog {
+    padding: 0;
+  }
   .el-dialog__header {
     position: fixed !important;
     top: 0;
@@ -50,6 +70,10 @@
     background-color: var(--sunwise-bg-color);
     z-index: 2023;
 
+    .el-dialog__headerbtn {
+      top: 0;
+      right: 0;
+    }
     .el-dialog__title {
       font-size: 16px;
       font-weight: 500;
@@ -63,6 +87,10 @@
     padding: 5px;
     margin-top: 50px;
     height: calc(100% - 50px);
+  }
+  .el-dialog__footer {
+    padding-right: 20px;
+    padding-bottom: 16px;
   }
 }
 
@@ -79,19 +107,6 @@
   .el-message-box__message {
     text-align: center;
     font-size: 16px;
-  }
-}
-
-// 自定义 '预览' 弹窗样式
-.custom-preview-dialog {
-  max-width: 80% !important;
-  height: 90%;
-  .el-message-box__content {
-    height: calc(100% - 80px);
-  }
-  .el-message-box__container,
-  .el-message-box__message {
-    height: 100%;
   }
 }
 

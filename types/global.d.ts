@@ -1,4 +1,5 @@
 // type SEmptyArea = import('./lib/components/emptyArea/src/index.vue')
+import SDialog from './lib/components/dialog/src/index.vue'
 import SEmptyArea from './lib/components/emptyArea/src/index.vue'
 import SPagination from './lib/components/pagination/src/index.vue'
 import SSearch from './lib/components/search/src/index.vue'
@@ -9,6 +10,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ElPagination: typeof import('element-plus')['ElPagination']
 
+    SDialog: typeof SDialog
     SEmptyArea: typeof SEmptyArea
     SPagination: typeof SPagination
     SSearch: typeof SSearch

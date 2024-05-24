@@ -2,6 +2,7 @@
 import '@/assets/styles/index.scss'
 
 import type { Component, App } from 'vue'
+import SDialog from './components/dialog'
 import SEmptyArea from './components/emptyArea'
 import SPagination from './components/pagination'
 import SSearch from './components/search'
@@ -12,6 +13,7 @@ import STable from './components/table'
 const components: {
   [propName: string]: Component
 } = {
+  SDialog,
   SEmptyArea,
   SPagination,
   SSearch,
@@ -26,7 +28,7 @@ const install: any = (app: any, router?: any) => {
 }
 
 // 按需引入
-export { SEmptyArea, SPagination, SSearch, STable }
+export { SDialog, SEmptyArea, SPagination, SSearch, STable }
 
 // 全部引入
 export default {
