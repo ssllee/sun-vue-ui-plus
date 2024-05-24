@@ -8,14 +8,14 @@
     <SDialog
       v-if="isShow"
       v-model="isShow"
-      title="请输入新流程名称"
+      title="请输入新名称"
       :type="dialogType"
       @save="onSave(formRef)"
       @cancel="onCancel"
     >
       <el-form ref="formRef" :model="form" :rules="rules">
         <el-form-item prop="name">
-          <el-input v-model="form.name" placeholder="请输入新流程名称" maxlength="20" show-word-limit></el-input>
+          <el-input v-model="form.name" placeholder="请输入新名称" maxlength="20" show-word-limit></el-input>
         </el-form-item>
       </el-form>
     </SDialog>
@@ -31,7 +31,7 @@
   const state = reactive({
     form: { name: '' },
     rules: {
-      name: { required: true, trigger: ['blur', 'change'], message: '新流程名称不能为空' }
+      name: { required: true, trigger: ['blur', 'change'], message: '新名称不能为空' }
     }
   })
   const dialogType = ref('')
