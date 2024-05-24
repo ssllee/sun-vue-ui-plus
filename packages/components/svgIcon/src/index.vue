@@ -21,7 +21,7 @@
     },
     color: {
       type: String,
-      default: '#333'
+      default: '' // 这里不要初始设置颜色'#1d1d1f'，否则css color不起作用
     }
   })
   // 与配置文件里保持一致
