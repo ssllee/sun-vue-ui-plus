@@ -20,7 +20,7 @@
     line-height: 50px;
     padding: 0 0 0 20px;
     margin-right: 0;
-    border-bottom: 1px solid var(--portal-border-light-color);
+    border-bottom: 1px solid var(--sunwise-border-light-color);
 
     .el-dialog__title {
       font-size: 16px;
@@ -46,8 +46,8 @@
     line-height: 50px;
     padding: 0 0 0 20px;
     margin-right: 0;
-    border-bottom: 1px solid var(--portal-border-light-color);
-    background-color: var(--portal-bg-color);
+    border-bottom: 1px solid var(--sunwise-border-light-color);
+    background-color: var(--sunwise-bg-color);
     z-index: 2023;
 
     .el-dialog__title {
@@ -103,11 +103,11 @@
 .sunwise-table {
   &.el-table {
     width: 100%;
-    border: 1px solid var(--portal-border-light-color);
+    border: 1px solid var(--sunwise-border-light-color);
     border-bottom: none;
-    --el-table-border-color: var(--portal-border-light-color);
-    --el-table-text-color: var(--portal-text-default-color);
-    --el-table-header-text-color: var(--portal-text-default-color);
+    --el-table-border-color: var(--sunwise-border-light-color);
+    --el-table-text-color: var(--sunwise-text-default-color);
+    --el-table-header-text-color: var(--sunwise-text-default-color);
   }
 
   &.el-table .el-table__cell {
@@ -115,11 +115,11 @@
   }
   &.el-table th.el-table__cell,
   &.el-table th.el-table-fixed-column--right.el-table__cell {
-    background: var(--portal-header-fill-color);
+    background: var(--sunwise-header-fill-color);
     font-weight: 500 !important;
   }
   .el-table__body tr.el-table__row--striped td.el-table__cell {
-    background: var(--portal-table-td-fill-color) !important;
+    background: var(--sunwise-table-td-fill-color) !important;
   }
 
   // table selection
@@ -139,7 +139,7 @@
   .el-pager li:not(.is-active),
   .btn-next,
   .btn-prev {
-    border: 1px solid var(--portal-border-light-color) !important;
+    border: 1px solid var(--sunwise-border-light-color) !important;
     background: transparent !important;
   }
 }
