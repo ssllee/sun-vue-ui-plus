@@ -2,7 +2,7 @@
 import SEmptyArea from './lib/components/emptyArea/src/index.vue'
 import SPagination from './lib/components/pagination/src/index.vue'
 import SSearch from './lib/components/search/src/index.vue'
-import SSvgIcon from './lib/components/svgIcon/src/index.vue'
+// import SSvgIcon from './lib/components/svgIcon/src/index.vue'
 import STable from './lib/components/table/src/index.vue'
 
 declare module '@vue/runtime-core' {
@@ -12,7 +12,7 @@ declare module '@vue/runtime-core' {
     SEmptyArea: typeof SEmptyArea
     SPagination: typeof SPagination
     SSearch: typeof SSearch
-    SSvgIcon: typeof SSvgIcon
+    // SSvgIcon: typeof SSvgIcon
     STable: typeof STable
 
     // SEmptyArea: typeof import('./lib/components/emptyArea/src/index.vue')

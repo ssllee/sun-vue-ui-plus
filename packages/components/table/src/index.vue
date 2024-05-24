@@ -39,7 +39,8 @@
                 :type="item.stateOptions[scope.row[item.prop] + '']?.className"
               >
                 <div class="x-y-center">
-                  <div><s-svg-icon name="dot"></s-svg-icon></div>
+                  <!-- <div><s-svg-icon name="dot"></s-svg-icon></div> -->
+                  <div class="icon-size"><SolidCircle /></div>
                   <div>
                     {{ item.stateOptions[scope.row[item.prop] + '']?.stateName }}
                   </div>
@@ -90,10 +91,11 @@
 </template>
 
 <script setup lang="ts" name="STable">
+  import SolidCircle from '@/components/icons/SolidCircle.vue'
   import { PropType } from 'vue'
   import { isFunction } from '@vueuse/core'
   import { OnBlur } from '@/utils/directives/index'
-  import SSvgIcon from '@/components/svgIcon/index'
+  // import SSvgIcon from '@/components/svgIcon/index'
   import SEmptyArea from '@/components/emptyArea/index'
   import SEmptyImage from '@/assets/images/noData.png'
   import _clonedeep from 'lodash.clonedeep'
@@ -181,6 +183,11 @@
       padding-right: 8px !important;
       padding-left: 5px !important;
     }
+  }
+  .icon-size {
+    display: flex;
+    font-size: 4px;
+    margin-right: 3px;
   }
 
   :deep(.el-tag.el-tag--success) {
