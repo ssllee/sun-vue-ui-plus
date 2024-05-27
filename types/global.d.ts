@@ -5,6 +5,7 @@ import SPagination from './lib/components/pagination/src/index.vue'
 import SSearch from './lib/components/search/src/index.vue'
 // import SSvgIcon from './lib/components/svgIcon/src/index.vue'
 import STable from './lib/components/table/src/index.vue'
+import { SBtnTabsGroup, SBtnTabsSpace } from './lib/components/tabs/src/index.vue'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
@@ -16,6 +17,8 @@ declare module '@vue/runtime-core' {
     SSearch: typeof SSearch
     // SSvgIcon: typeof SSvgIcon
     STable: typeof STable
+    SBtnTabsGroup: typeof SBtnTabsGroup
+    SBtnTabsSpace: typeof SBtnTabsSpace
 
     // SEmptyArea: typeof import('./lib/components/emptyArea/src/index.vue')
     // SPagination: typeof import('./lib/components/pagination/src/index.vue')

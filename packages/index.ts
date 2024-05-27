@@ -8,6 +8,7 @@ import SPagination from './components/pagination'
 import SSearch from './components/search'
 // import SSvgIcon from './components/svgIcon' // svg-icon 先不导出了，暂时外部无法显示
 import STable from './components/table'
+import { SBtnTabsGroup, SBtnTabsSpace } from './components/tabs'
 
 // 存储组件列表
 const components: {
@@ -17,7 +18,9 @@ const components: {
   SEmptyArea,
   SPagination,
   SSearch,
-  STable
+  STable,
+  SBtnTabsGroup,
+  SBtnTabsSpace
 }
 
 // vue插件
@@ -28,7 +31,7 @@ const install: any = (app: any, router?: any) => {
 }
 
 // 按需引入
-export { SDialog, SEmptyArea, SPagination, SSearch, STable }
+export { SDialog, SEmptyArea, SPagination, SSearch, STable, SBtnTabsGroup, SBtnTabsSpace }
 
 // 全部引入
 export default {

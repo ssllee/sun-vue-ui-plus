@@ -23,6 +23,11 @@
 </template>
 
 <script lang="ts" setup name="SDialog">
+  import { OnBlur } from '@/utils/directives/index'
+
+  // 自定义指令
+  const vOnBlur = OnBlur
+
   const props = defineProps({
     // 模态框是否显示
     modelValue: {
