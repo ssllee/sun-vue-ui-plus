@@ -23,4 +23,6 @@ app.use(SunVueUiPlus)
 app.mount('#app')
 ```
 
-### 问题 build 中 dts 时报错 error TS2742
+### 问题
+
+1.build 中 dts 时报错 error TS2742
