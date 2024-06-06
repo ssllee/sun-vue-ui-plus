@@ -62,7 +62,7 @@
 
 <script setup lang="ts" name="SSearch">
   import _clonedeep from 'lodash.clonedeep'
-  // import type { FormInstance } from 'element-plus' // npm run lib 报 error TS2742
+  import type { FormInstance } from 'element-plus' // node 18 时 npm run lib 报 error TS2742
   import type { TableSearchType } from 'sun-vue-ui-plus/types'
 
   const props = defineProps({
@@ -81,27 +81,26 @@
   const emit = defineEmits(['search'])
 
   // 定义变量内容
-  const tableSearchRef = ref<HTMLFormElement>()
-  // const tableSearchRef = ref<FormInstance>()
+  // const tableSearchRef = ref<HTMLFormElement>()
+  const tableSearchRef = ref<FormInstance>()
 
   const state = reactive({
     form: {}
   })
 
   // 查询
-  const handleSearch = (formEl: any | undefined) => {
+  const handleSearch = (formEl: FormInstance | undefined) => {
     if (!formEl) return
-    // @ts-ignore
     formEl.validate((valid: boolean) => {
       if (valid) {
         emit('search', state.form)
       } else {
-        return false
+        // return false
       }
     })
   }
   // 重置
-  const handleReset = (formEl: any | undefined) => {
+  const handleReset = (formEl: FormInstance | undefined) => {
     if (!formEl) return
     formEl.resetFields()
     // initFormField()
